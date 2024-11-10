@@ -1,0 +1,10 @@
+------------------------DESCRIPTION----------------
+Question: `Given a matrix, write a python function to return the transpose of the matrix.`
+
+
+
+--Constrains Start--
+- The Function should be named 'solution'
+- The Function should take a single parameter, which is a list of lists (matrix).
+- The Function should output a list of lists (transposed matrix).
+--Constrains End--

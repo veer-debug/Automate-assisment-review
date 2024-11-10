@@ -1,0 +1,1 @@
+Write a function that takes name and attributes of a class and return an object of that class. (Class is not present in the python program environment)

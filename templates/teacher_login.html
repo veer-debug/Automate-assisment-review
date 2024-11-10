@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+        }
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .form-control {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        .btn-custom {
+            width: 100%;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Flash messages -->
+    <div id="flash-container" class="position-fixed w-100" style="top: 10px; z-index: 100;">
+        <!-- Flask will populate this -->
+    </div>
+
+    <h1>Teacher Login</h1>
+    <form action="/teacher_dashboard" method="POST" onsubmit="return validateForm()">
+        <input type="text" class="form-control" id="username" placeholder="Username" required>
+        <input type="password" class="form-control" id="password" placeholder="Password" required>
+        <button type="submit" class="btn btn-primary btn-custom">Login</button>
+    </form>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for Flash Messages and Validation -->
+    <script>
+        function displayFlashMessage(message, category) {
+            const flashContainer = document.getElementById('flash-container');
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${category} alert-dismissible fade show text-center mx-auto mt-2`;
+            alert.style.maxWidth = '500px';
+            alert.innerHTML = `<strong>${message}</strong> <button type="button" class="close" data-dismiss="alert">&times;</button>`;
+            flashContainer.appendChild(alert);
+            setTimeout(() => {
+                $(alert).alert('close');
+            }, 3000);
+        }
+        
+        function validateForm() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            
+            if (username.trim() === "" || password.trim() === "") {
+                displayFlashMessage('All fields are required!', 'danger');
+                return false;
+            }
+            return true;
+        }
+        
+        // Example Flash Message (remove in production)
+        displayFlashMessage('Welcome to the login page!', 'info');
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+ERROR:root:Please Provide Assignment_Folder_Name and Student_Email as console arguments.
+INFO:root:Grade Once For New_Assignment, sumitjaidka786@gmail.com
+INFO:root:Starting grading process
+INFO:root:Initializing questions dictionary.
+INFO:root:Started Getting Solutions
+INFO:httpx:HTTP Request: POST https://models.inference.ai.azure.com/chat/completions "HTTP/1.1 200 OK"
+INFO:root:API request made.
+ERROR:root:Error grading question 1: can only concatenate str (not "int") to str
+INFO:httpx:HTTP Request: POST https://models.inference.ai.azure.com/chat/completions "HTTP/1.1 200 OK"
+INFO:root:API request made.
+ERROR:root:Error grading question 2: can only concatenate str (not "int") to str
+INFO:root:Stored grade: 0.0 for student ID 1
+INFO:root:Feedback sent to sumitjaidka786@gmail.com
+INFO:root:Grade Once For DSA_3, sumitjaidka786@gmail.com
+INFO:root:Starting grading process
+INFO:root:Initializing questions dictionary.
+INFO:root:Started Getting Solutions
+INFO:httpx:HTTP Request: POST https://models.inference.ai.azure.com/chat/completions "HTTP/1.1 200 OK"
+INFO:root:API request made.
+ERROR:root:Error grading question 1: can only concatenate str (not "int") to str
+INFO:httpx:HTTP Request: POST https://models.inference.ai.azure.com/chat/completions "HTTP/1.1 200 OK"
+INFO:root:API request made.
+ERROR:root:Error grading question 2: can only concatenate str (not "int") to str
+INFO:root:Stored grade: 0.0 for student ID 1
+INFO:root:Feedback sent to sumitjaidka786@gmail.com
+INFO:root:Grade Once For DSA_3, sumitjaidka786@gmail.com
+INFO:root:Starting grading process
+INFO:root:Initializing questions dictionary.
+INFO:root:Started Getting Solutions
+INFO:httpx:HTTP Request: POST https://models.inference.ai.azure.com/chat/completions "HTTP/1.1 200 OK"
+INFO:root:API request made.
+ERROR:root:Error grading question 1: can only concatenate str (not "int") to str
+INFO:httpx:HTTP Request: POST https://models.inference.ai.azure.com/chat/completions "HTTP/1.1 200 OK"
+INFO:root:API request made.
+ERROR:root:Error grading question 2: can only concatenate str (not "int") to str
+ERROR:root:Failed to store grades in the database: UNIQUE constraint failed: grades.intern_id, grades.assignment_id
+INFO:root:Feedback sent to sumitjaidka786@gmail.com
+INFO:root:Grade Once For veer, sumitjaidka786@gmail.com
+INFO:root:Starting grading process
+INFO:root:Initializing questions dictionary.
+INFO:root:Started Getting Solutions
+INFO:httpx:HTTP Request: POST https://models.inference.ai.azure.com/chat/completions "HTTP/1.1 200 OK"
+INFO:root:API request made.
+ERROR:root:Error grading question 1: can only concatenate str (not "int") to str
+INFO:root:Stored grade: 0.0 for student ID 1
+INFO:root:Feedback sent to sumitjaidka786@gmail.com

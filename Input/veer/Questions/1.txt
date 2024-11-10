@@ -1,0 +1,10 @@
+------------------------DESCRIPTION----------------
+Question: `FEBONACHI SERIESE`
+
+
+
+--Constrains Start--
+- The Function should be named 'solution'
+- The Function should take a single integer parameter 'n' which represents the position in the Fibonacci sequence.
+- The Function should output an integer which is the Fibonacci number at the given position.
+--Constrains End--

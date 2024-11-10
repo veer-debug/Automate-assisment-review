@@ -1,0 +1,10 @@
+------------------------DESCRIPTION----------------
+Question: `Write a program to find the three numbers whose product is the maximum in a given array.`
+
+
+
+--Constrains Start--
+- The Function should be named 'solution'
+- The Function should take a single parameter: a list of integers.
+- The Function should output a single integer, which is the maximum product of any three numbers from the input list.
+--Constrains End--

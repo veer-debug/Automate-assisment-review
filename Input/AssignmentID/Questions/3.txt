@@ -1,0 +1,10 @@
+------------------------DESCRIPTION----------------
+Question: `Write a Python function to reverse a string.`
+
+
+
+--Constrains Start--
+- The Function should be named 'solution'
+- The Function should take a single string parameter as input.
+- The Function should output the reversed string.
+--Constrains End--

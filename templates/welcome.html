@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+        }
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: 2.5rem;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .btn-custom {
+            padding: 12px 24px;
+            margin: 10px;
+            font-size: 1rem;
+            border-radius: 30px;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .btn-custom:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Flash messages -->
+    <div id="flash-container" class="position-fixed w-100" style="top: 10px; z-index: 100;">
+        <!-- Flask will populate this -->
+    </div>
+
+    <h1>Welcome</h1>
+    <button class="btn btn-primary btn-custom" onclick="window.location.href='/teacher_login'">Teacher's Login</button>
+    <button class="btn btn-success btn-custom" onclick="window.location.href='/student_login'">Student's Login</button>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript for flash messages -->
+    <script>
+        function displayFlashMessage(message, category) {
+            const flashContainer = document.getElementById('flash-container');
+            const alert = document.createElement('div');
+            alert.className = `alert alert-${category} alert-dismissible fade show text-center mx-auto mt-2`;
+            alert.style.maxWidth = '500px';
+            alert.innerHTML = `<strong>${message}</strong> <button type="button" class="close" data-dismiss="alert">&times;</button>`;
+            flashContainer.appendChild(alert);
+            setTimeout(() => {
+                $(alert).alert('close');
+            }, 3000);
+        }
+        
+        // Example Flash Message (remove in production)
+        displayFlashMessage('This is a sample flash message!', 'info');
+    </script>
+</body>
+</html>

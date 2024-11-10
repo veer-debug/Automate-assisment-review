@@ -1,0 +1,10 @@
+------------------------DESCRIPTION----------------
+Question: `Write a function to inverse a matrix.`
+
+
+
+--Constrains Start--
+- The Function should be named 'solution'
+- The Function should take a single parameter, which is a list of lists representing the matrix.
+- The Function should output a list of lists representing the inverse of the matrix, or raise an error if the matrix is singular.
+--Constrains End--

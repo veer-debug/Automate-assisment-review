@@ -1,0 +1,10 @@
+------------------------DESCRIPTION----------------
+Question: `Write a function to get unique elements in an array.`
+
+
+
+--Constrains Start--
+- The Function should be named 'solution'
+- The Function should take a single parameter, which is a list of elements.
+- The Function should output a list of unique elements, preserving the order of their first occurrence.
+--Constrains End--

@@ -1,0 +1,10 @@
+------------------------DESCRIPTION----------------
+Question: `Make a Python Function that accepts arrays and returns their unique elements`
+
+
+
+--Constrains Start--
+- The Function should be named 'solution'
+- The Function should take a single parameter, which is a list (array).
+- The Function should output a list of unique elements.
+--Constrains End--

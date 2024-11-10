@@ -1,0 +1,10 @@
+------------------------DESCRIPTION----------------
+Question: `Write a function to make context grammar tree from English sentences and print the tree.`
+
+
+
+--Constrains Start--
+- The Function should be named 'solution'.
+- The Function should take a single string parameter representing an English sentence as input.
+- The Function should output a string representation of the context-free grammar tree.
+--Constrains End--

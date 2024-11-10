@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Assignment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            font-family: 'Lato', sans-serif;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #444;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .question-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 10px 0;
+            width: 100%;
+            max-width: 800px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .question-content {
+            white-space: pre-wrap;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            margin-bottom: 15px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
+
+        input[type="file"] {
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 30px;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            align-self: center;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ assignment_name }}</h1>
+    <form action="/upload_solutions/{{ assignment_name }}" method="POST" enctype="multipart/form-data">
+        {% for question in questions %}
+        <div class="question-container">
+            <div class="question-header">
+                <h3>Question {{ loop.index }}</h3>
+            </div>
+            <div class="question-content">
+                {{ question }}
+            </div>
+            <input type="file" name="solution_{{ loop.index }}" accept=".py" required>
+        </div>
+        {% endfor %}
+        <button type="submit">Upload All Solutions</button>
+    </form>
+</body>
+</html>

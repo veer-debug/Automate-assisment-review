@@ -1,0 +1,10 @@
+------------------------DESCRIPTION----------------
+Question: `Write a program for performing A* Search.`
+
+
+
+--Constrains Start--
+- The Function should be named 'solution'
+- The Function should take 'start', 'goal', and 'grid' as input.
+- The Function should output a list of tuples representing the path from start to goal, or None if no path exists.
+--Constrains End--
