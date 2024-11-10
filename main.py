@@ -1,5 +1,5 @@
 from backend.api.chatgpt_api import HomeworkGrader
-from database.DataBase import Connect_DB
+from DATABASE.DataBase import Connect_DB
 from backend.api.mail import send_feedback, extract_marks_and_feedback
 from backend.directory.getinput import GetInputs
 from backend.directory.run_test_cases import dynamic_import_and_test
